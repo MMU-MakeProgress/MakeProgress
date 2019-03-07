@@ -1,0 +1,7 @@
+{
+  "name": "MakeProgress",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

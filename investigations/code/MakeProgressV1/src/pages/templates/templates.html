@@ -1,0 +1,33 @@
+<!--
+  Generated template for the TemplatesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Templates</ion-title>
+    <ion-buttons end> <button (click)="gotoAddTemplate()" ion-button> Add Template</button> </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div ng-hide="!noEvents">
+
+    <ion-list>
+        <ion-item ng-click="onItemSelected($index)" ng-repeat="event in events">
+            {{event}}
+        </ion-item>
+    </ion-list>
+
+</div>
+
+
+
+<div ng-hide="!noEvents" style="text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    <h1 class="light">No Templates Yet!</h1>
+</div>
+</ion-content>
