@@ -1,11 +1,11 @@
-self.addEventListener('activate', function (event) {
+self.addTemplateListener('activate', function (template) {
 
 });
 
-self.addEventListener('fetch', function (event) {
+self.addTemplateListener('fetch', function (template) {
 
 });
 
-self.addEventListener('push', function (event) {
+self.addTemplateListener('push', function (template) {
 
 });

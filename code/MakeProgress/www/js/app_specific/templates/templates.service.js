@@ -2,27 +2,27 @@
     'use strict';
 
     angular
-        .module('eventsjs')
-        .factory('eventsSrvc', eventsSrvc);
+        .module('templatesjs')
+        .factory('templateSrvc', templateSrvc);
 
-        eventsSrvc.$inject = [
+        templateSrvc.$inject = [
             '$q', // promises service
             '$timeout', // timeout service
             'moment' // does dates really well
         ];
 
-    function eventsSrvc(
+    function templateSrvc(
         $q,
         $timeout,
         moment
     ) {
-        var eventsArray = [];
+        var templatesArray = [];
         var service = {
             
         };
 
         var PAUSE_FOR_A_WHILE_MS = 3000;
-        var NUM_DUMMY_EVENTS = 10;
+        var NUM_DUMMY_TEMPLATES = 10;
 
 
         var createEvent = function(name, date, postcode){
@@ -35,7 +35,7 @@
             return result;
         }
 
-        var createDummyEvents = function(numToCreate){
+        var createDummyTemplates = function(numToCreate){
             var result = [];
 
             for(var index=0; index < numToCreate; index++){
@@ -55,8 +55,8 @@
             
             $timeout(
                 function(){
-                    eventsArray = createDummyEvents(NUM_DUMMY_EVENTS);
-                    deferred.resolve(eventsArray);
+                    templatesArray = createDummyTemplates(NUM_DUMMY_TEMPLATES);
+                    deferred.resolve(templatesArray);
                 },
             PAUSE_FOR_A_WHILE_MS);            
             
@@ -64,25 +64,25 @@
             return deferred.promise;
         }
 
-        var promiseToUpdateEvents = function(){
+        var promiseToUpdateTemplates = function(){
             // returns a promise
             return replaceWithRealCode();
         }
 
-        service.updateEvents = function(){
-            return promiseToUpdateEvents();   
+        service.updateTemplates = function(){
+            return promiseToUpdateTemplates();   
         } 
 
-        service.getEvents = function(){
-            return angular.copy(eventsArray);
+        service.getTemplates = function(){
+            return angular.copy(templatesArray);
         }
 
-        service.getNumEvents = function(){
-            return eventsArray.length;
+        service.getNumTemplates = function(){
+            return templatesArray.length;
         }
 
-        service.getEventAt = function(index){
-            return angular.copy(eventsArray[index]);
+        service.getTemplateAt = function(index){
+            return angular.copy(templatesArray[index]);
         }
 
 
