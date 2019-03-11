@@ -2,29 +2,23 @@
 	'use strict';
 
 	angular
-		.module('eventsjs', [
+		.module('templatesjs', [
 		])
         .config(function($stateProvider) {
 			$stateProvider
-				.state('events_list', {
+				.state('templates_list', {
 					cache: false,
-					url: '/events_list',
-					templateUrl: 'js/app_specific/events/events.list.html',
-                    controller: 'eventsListCtrl as vm'
-                })
-                .state('events_update', {
+					url: '/templates_list',
+					templateUrl: 'js/app_specific/templates/templates.list.html',
+                    controller: 'templatesListCtrl as vm'
+				})
+				
+				.state('templates_add', {
 					cache: false,
-					url: '/events_update',
-					templateUrl: 'js/app_specific/events/events.update.html',
-                    controller: 'eventsUpdateCtrl as vm'
-                })
-                .state('events_detail', {
-					cache: false,
-					url: '/events_detail',
-                    templateUrl: 'js/app_specific/events/events.detail.html',
-                    params: {'selected': 0 },
-                    controller: 'eventsDetailCtrl as vm'
+					url: '/templates_add',
+					templateUrl: 'js/app_specific/templates/templates.add.html',
+                    controller: 'templatesAddCtrl as vm'
                 })
             });
-				
+		
 })();

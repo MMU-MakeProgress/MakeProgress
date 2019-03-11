@@ -6,11 +6,11 @@
 angular.module('starter', [
   'ionic',
   'momentjs', // ADDED used for dates
-  'eventsjs'  // ADDED our events module
+  'templatesjs'  // ADDED our events module
 ])
 
   .run(function ($ionicPlatform, $state, $rootScope) {
-    $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+    $rootScope.$on('$stateChangeStart', function (template, toState, toParams, fromState, fromParams) {
       console.log('$stateChangeStart to ' + toState.to + '- fired when the transition begins. toState,toParams : \n', toState, toParams);
     });
     $ionicPlatform.ready(function () {
@@ -28,7 +28,7 @@ angular.module('starter', [
         StatusBar.styleDefault();
       }
       // ADDED START
-      $state.go("events_list");
+      $state.go("templates_list");
       // ADDED END
 
     });
