@@ -33,16 +33,11 @@
             return vm.templates.length == 0;
         }
 
-        vm.update = function(){
-            //$state.go('events_update');
-        }
-
         vm.add = function() {
             $state.go('templates_add');
         }
 
-
-        vm.templates = templatesSrvc.getTemplates();
+        //vm.templates = templatesSrvc.getTemplates();
               
     }
 })();

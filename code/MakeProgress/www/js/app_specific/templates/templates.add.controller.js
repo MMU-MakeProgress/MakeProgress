@@ -15,12 +15,16 @@
         var vm = angular.extend(this, {
            
          });
+        
+         vm.attributes = [];
+         vm.check = false;
 
-    
+         if ($scope.deadline != null) {
+             vm.check = true;
+         }
          
-        vm.funcSelectChange = function(){
-            $scope.count == 'Hello World'
-            alert('changed')
-        }
+         vm.addfield=function() {
+            vm.attributes.push({})
+          }
     }
 })();
