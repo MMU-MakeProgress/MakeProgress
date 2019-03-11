@@ -28,7 +28,6 @@
             // I'm going to write the destination controller, so it knows to look for an object with a 'selected' attribute
             $state.go('events_detail', {selected: index});
 
-
         }
 
         vm.noEvents = function(){
