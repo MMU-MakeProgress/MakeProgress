@@ -1,0 +1,31 @@
+<ion-view style="background-color: #272733;" can-swipe-back="false">
+     
+    <ion-header-bar class="bar-dark" align-title="center">
+
+    </ion-header-bar>
+
+    <ion-content>  
+        <label class="item item-input">
+            <span class="input-label">Wheel Name</span>
+            <input type="text">
+        </label>
+        <label class="item item-input">
+            <span class="input-label">Description</span>
+            <input type="text">
+        </label>
+        <label class="item item-input item-select">
+            <div class="input-label">
+              Number Of Attributes
+            </div>
+          <select id="selectAttribute" ng-model="value" ng-change="funcSelectChange()">
+            <option ng-repeat="v in values" ng-selected="v == value">{{ v }}</option>
+            </select>
+        </label>
+      </labeL>
+
+      <p>{{count}}</p> 
+      </div>
+
+    </ion-content>
+     
+ </ion-view>
