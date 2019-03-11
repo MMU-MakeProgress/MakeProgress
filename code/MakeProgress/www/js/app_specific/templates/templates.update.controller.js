@@ -17,9 +17,6 @@
         var vm = angular.extend(this, {
             
          });
-        
-
-      
 
         // TODO: Error Handling
         eventsSrvc.updateEvents().then(function(){

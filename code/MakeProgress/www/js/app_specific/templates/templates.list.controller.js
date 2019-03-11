@@ -19,7 +19,6 @@
          });
         
 
-        
         vm.onItemSelected = function(index){
             console.log("Item : " + index);
 
@@ -27,7 +26,6 @@
             // 'selected is an attribute in a parameter object, defined in the module definition
             // I'm going to write the destination controller, so it knows to look for an object with a 'selected' attribute
             $state.go('events_detail', {selected: index});
-
 
         }
 
