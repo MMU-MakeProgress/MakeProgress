@@ -19,7 +19,6 @@
          });
         
 
-        
         vm.onItemSelected = function(index){
             console.log("Item : " + index);
 
