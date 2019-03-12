@@ -15,10 +15,12 @@
         templatesSrvc
     ) {
         var vm = angular.extend(this, {
-            attributes : []
+            
          });
+
+         vm.attributes = [];
          
-         vm.addfield=function() {
+         vm.addattribute = function() {
             vm.attributes.push({})
           }
 
