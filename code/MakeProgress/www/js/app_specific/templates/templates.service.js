@@ -47,6 +47,7 @@
 
         var saveTemplateToLocalStorage = function()
         {
+           window.localStorage.setItem();
             
         }
 
