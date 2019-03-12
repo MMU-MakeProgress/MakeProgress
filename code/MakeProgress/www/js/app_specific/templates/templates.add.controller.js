@@ -7,16 +7,16 @@
 
     control.$inject = [
         '$state',
+        'templatesSrvc'
         ];
     
     function control(
         $state,
+        templatesSrvc
     ) {
         var vm = angular.extend(this, {
-           
+            attributes : []
          });
-        
-         vm.attributes = [];
          
          vm.addfield=function() {
             vm.attributes.push({})

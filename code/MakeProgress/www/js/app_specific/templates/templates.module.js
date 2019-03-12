@@ -3,6 +3,7 @@
 
 	angular
 		.module('templatesjs', [
+			
 		])
         .config(function($stateProvider) {
 			$stateProvider

@@ -14,18 +14,18 @@
             <span class="input-label">Description</span>
             <input type="text" ng-model='tempDesc'>
         </label>
-        <div class="addcontent">
+        <div class="addattribute">
             <div ng-repeat="attribute in attributes">
               <span class="input-label">Attributes</span>
               <input ng-model="attribute.value"> <button></button>
             </div>
-          </div>
+        </div>
 
         <button ng-click="addfield()" class="button button-full button-positive">Add Attribute</button>
 
         <button ng-click="save()" class="button button-full button-balanced"> Save</button>
 
-        <button ng-click="cancel()" class="button button-full button-assertive">Cancel</button>
+        <button ng-click="vm.cancel()" class="button button-full button-assertive">Cancel</button>
       
       </div>
 
