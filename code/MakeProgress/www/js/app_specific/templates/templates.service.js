@@ -3,15 +3,15 @@
 
     angular
         .module('templatesjs')
-        .factory('templateSrvc', templateSrvc);
+        .factory('templatesSrvc', templatesSrvc);
 
-        templateSrvc.$inject = [
+        templatesSrvc.$inject = [
             '$q', // promises service
             '$timeout', // timeout service
             'moment' // does dates really well
         ];
 
-    function templateSrvc(
+    function templatesSrvc(
         $q,
         $timeout,
         moment
