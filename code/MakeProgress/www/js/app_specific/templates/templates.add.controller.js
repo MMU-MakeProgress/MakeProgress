@@ -17,14 +17,13 @@
          });
         
          vm.attributes = [];
-         vm.check = false;
-
-         if ($scope.deadline != null) {
-             vm.check = true;
-         }
          
          vm.addfield=function() {
             vm.attributes.push({})
           }
+
+        vm.cancel = function() {
+            $state.go('templates_list');
+        }
     }
 })();
