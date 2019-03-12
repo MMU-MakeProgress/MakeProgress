@@ -15,8 +15,10 @@
         templatesSrvc
     ) {
         var vm = angular.extend(this, {
+            tempName : "",
+            tempDesc : "",
             attributes : [],
-            data : Boolean
+            data : undefined
          });
 
          vm.addattribute = function() {
@@ -25,16 +27,20 @@
             }
          } 
 
-         vm.delattribute = function(index) {
+         vm.delattribute = function() {
              vm.attributes.splice(index, 1);
          }
          
          vm.savetemp = function() {
-            vm.data = true;
+             console.log("templates.add.controller:savetemp called");
+            templatesSrvc.addNewTemplate(vm.tempName, vm.tempDesc, vm.attributes);
+            $state.go('templates_list');
          }
 
         vm.cancel = function() {
             $state.go('templates_list');
         }
+
+        
     }
 })();

@@ -8,16 +8,16 @@
       
         <label class="item item-input">
             <span class="input-label">Wheel Name</span>
-            <input type="text" ng-model='tempName'>
+            <input type="text" ng-model='vm.tempName'>
         </label>
         <label class="item item-input">
             <span class="input-label">Description</span>
-            <input type="text" ng-model='tempDesc'>
+            <input type="text" ng-model='vm.tempDesc'>
         </label>
         <div ng-repeat="attribute in vm.attributes track by $index">
             <label class="item item-input">
                 <span class="input-label">Attribute {{$index+1}}</span>
-                <input type="text" ng-model='attributes[$index]'>
+                <input type="text" ng-model='vm.attributes[$index]'>
                 <button class="button" ng-click="vm.delattribute($index)">X</button>
             </label>
         </div>
