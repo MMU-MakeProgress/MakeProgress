@@ -14,16 +14,17 @@
             <span class="input-label">Description</span>
             <input type="text" ng-model='tempDesc'>
         </label>
-        <div class="addattribute">
-            <div ng-repeat="attribute in attributes">
-              <span class="input-label">Attributes</span>
-              <input ng-model="attribute.value"> <button></button>
-            </div>
+        <div ng-repeat="attribute in vm.attributes track by $index">
+            <label class="item item-input">
+                <span class="input-label">Attribute {{$index+1}}</span>
+                <input type="text" ng-model='attributes[$index]'>
+                <button class="button" ng-click="vm.delattribute($index)">X</button>
+            </label>
         </div>
 
         <button class="button button-full button-positive" ng-click="vm.addattribute()">Add attribute</button>
 
-        <button class="button button-full button-balanced">Save</button>
+        <button class="button button-full button-balanced" ng-click="vm.savetemp()">Save</button>
 
         <button class="button button-full button-assertive" ng-click="vm.cancel()">Cancel</button>
       

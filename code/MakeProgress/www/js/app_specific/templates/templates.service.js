@@ -56,7 +56,7 @@
             
         }
 
-
+        
         var createEvent = function(name, date, postcode){
 
             var result = {
