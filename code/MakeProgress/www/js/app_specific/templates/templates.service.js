@@ -25,98 +25,36 @@
         var NUM_DUMMY_TEMPLATES = 10;
 
         
-        var getListOfTemplates = function()
+        service.getListOfTemplates = function()
         {
-            return templatesArray;
+            return angular.copy(templatesArray);
         }
 
-        var addNewTemplate = function()
-        {
-            var attributes =[];
+        service.addNewTemplate = function(name, description, attributes) {
+            console.log("templatesService.addNewTemplate called with ",{name:name,desc:description,attr:attributes});
+            //var attributes =[];
 
-            var result = 
+            var result =
             {
                 name : name,
                 description : description,
                 attributes: attributes
             }
+
+            templatesArray.push(result);
             return result;
-            
         }
 
-        var saveTemplateToLocalStorgae = function()
+        var saveTemplateToLocalStorage = function()
         {
-
+           window.localStorage.setItem();
             
         }
 
         var getExistingTemplatesFromLocalStorage = function()
         {
-
             
         }
-
-
-        var createEvent = function(name, date, postcode){
-
-            var result = {
-                name : name,
-                date : date,
-                postcode: postcode
-            }
-            return result;
-        }
-
-        var createDummyTemplates = function(numToCreate){
-            var result = [];
-
-            for(var index=0; index < numToCreate; index++){
-
-                var name = "event " + index;
-                var date = moment().add('years', index).toDate();
-                var postcode = "M1 5GD";
-
-                result.push(createEvent("event " + index, date, postcode));
-            }
-            return result;
-        }
-
-
-        var replaceWithRealCode = function(){
-            var deferred = $q.defer();
-            
-            $timeout(
-                function(){
-                    templatesArray = createDummyTemplates(NUM_DUMMY_TEMPLATES);
-                    deferred.resolve(templatesArray);
-                },
-            PAUSE_FOR_A_WHILE_MS);            
-            
-            
-            return deferred.promise;
-        }
-
-        var promiseToUpdateTemplates = function(){
-            // returns a promise
-            return replaceWithRealCode();
-        }
-
-        service.updateTemplates = function(){
-            return promiseToUpdateTemplates();   
-        } 
-
-        service.getTemplates = function(){
-            return angular.copy(templatesArray);
-        }
-
-        service.getNumTemplates = function(){
-            return templatesArray.length;
-        }
-
-        service.getTemplateAt = function(index){
-            return angular.copy(templatesArray[index]);
-        }
-
 
         return service;
 

@@ -37,7 +37,7 @@
             $state.go('templates_add');
         }
 
-        //vm.templates = templatesSrvc.getTemplates();
-              
+        vm.templates = templatesSrvc.getListOfTemplates();
+        
     }
 })();
