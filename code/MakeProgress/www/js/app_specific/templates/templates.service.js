@@ -24,6 +24,38 @@
         var PAUSE_FOR_A_WHILE_MS = 3000;
         var NUM_DUMMY_TEMPLATES = 10;
 
+        
+        var getListOfTemplates = function()
+        {
+            return templatesArray;
+        }
+
+        var addNewTemplate = function()
+        {
+            var attributes =[];
+
+            var result = 
+            {
+                name : name,
+                description : description,
+                attributes: attributes
+            }
+            return result;
+            
+        }
+
+        var saveTemplateToLocalStorgae = function()
+        {
+
+            
+        }
+
+        var getExistingTemplatesFromLocalStorage = function()
+        {
+
+            
+        }
+
 
         var createEvent = function(name, date, postcode){
 
