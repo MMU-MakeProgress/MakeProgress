@@ -22,9 +22,7 @@
         };
 
         var PAUSE_FOR_A_WHILE_MS = 3000;
-        var NUM_DUMMY_TEMPLATES = 10;
 
-        
         service.getListOfTemplates = function()
         {
             return angular.copy(templatesArray);
@@ -48,13 +46,13 @@
         var saveTemplateToLocalStorage = function()
         {
            window.localStorage.setItem();
-            
         }
 
         var getExistingTemplatesFromLocalStorage = function()
         {
             
         }
+
 
         return service;
 
