@@ -22,11 +22,11 @@
         };
 
         var PAUSE_FOR_A_WHILE_MS = 3000;
-        var NUM_DUMMY_TEMPLATES = 10;
 
-        
         service.getListOfTemplates = function()
         {
+            templatesArray = [];
+            getExistingTemplatesFromLocalStorage();
             return angular.copy(templatesArray);
         }
 
@@ -42,19 +42,21 @@
             }
 
             templatesArray.push(result);
+            saveTemplateToLocalStorage(result);
             return result;
         }
 
-        var saveTemplateToLocalStorage = function()
+        var saveTemplateToLocalStorage = function(templateObj)
         {
-           window.localStorage.setItem();
-            
+            window.localStorage.setItem('storeTemplate' , JSON.stringify(templateObj)); 
         }
 
         var getExistingTemplatesFromLocalStorage = function()
         {
+            templatesArray.push(JSON.parse(localStorage.getItem('storeTemplate')));
             
         }
+
 
         return service;
 

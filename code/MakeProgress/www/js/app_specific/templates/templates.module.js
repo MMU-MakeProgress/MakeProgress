@@ -19,7 +19,7 @@
 					url: '/templates_add',
 					templateUrl: 'js/app_specific/templates/templates.add.html',
                     controller: 'templatesAddCtrl as vm'
-                })
+				})
             });
 		
 })();

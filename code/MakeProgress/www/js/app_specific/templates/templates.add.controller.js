@@ -27,7 +27,7 @@
             }
          } 
 
-         vm.delattribute = function() {
+         vm.delattribute = function(index) {
              vm.attributes.splice(index, 1);
          }
          
