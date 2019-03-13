@@ -11,7 +11,7 @@
             'moment' // does dates really well
         ];
 
-    function templatesSrvc(
+    function wheelsSrvc(
         $q,
         $timeout,
         moment

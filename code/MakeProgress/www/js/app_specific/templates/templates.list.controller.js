@@ -21,9 +21,7 @@
 
         vm.onItemSelected = function(index){
             console.log("Item : " + index);
-
             //$state.go('templates_detail', {selected: index});
-
         }
 
         vm.noTemplates = function(){
@@ -33,7 +31,8 @@
         vm.add = function() {
             $state.go('templates_add');
         }
-
+        
+        
         vm.templates = templatesSrvc.getListOfTemplates();
         
     }
