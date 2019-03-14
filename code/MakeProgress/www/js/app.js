@@ -6,7 +6,8 @@
 angular.module('starter', [
   'ionic',
   'momentjs', // ADDED used for dates
-  'templatesjs'  // ADDED our events module
+  'templatesjs',  // ADDED our events module
+  'wheelsjs'
 ])
 
   .run(function ($ionicPlatform, $state, $rootScope) {

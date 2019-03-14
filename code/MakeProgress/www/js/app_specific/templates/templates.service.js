@@ -54,7 +54,6 @@
         var getExistingTemplatesFromLocalStorage = function()
         {
             templatesArray.push(JSON.parse(localStorage.getItem('storeTemplate')));
-            
         }
 
 
