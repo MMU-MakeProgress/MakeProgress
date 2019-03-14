@@ -22,6 +22,7 @@
         };
 
         service.wheelLocalStorage = function() {
+            wheelsArray = []
             wheelsArray.push(JSON.parse(localStorage.getItem('storeTemplate')));
             return angular.copy(wheelsArray);
 
