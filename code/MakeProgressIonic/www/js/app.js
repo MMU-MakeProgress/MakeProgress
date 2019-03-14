@@ -6,7 +6,9 @@
 angular.module('starter', [
   'ionic',
   'momentjs', // ADDED used for dates
-  'templatesjs'  // ADDED our events module
+  'templatesjs',  // ADDED our events module
+  'homejs',
+
 ])
 
   .run(function ($ionicPlatform, $state, $rootScope) {
@@ -28,7 +30,7 @@ angular.module('starter', [
         StatusBar.styleDefault();
       }
       // ADDED START
-      $state.go("templates_list");
+      $state.go("home");
       // ADDED END
 
     });

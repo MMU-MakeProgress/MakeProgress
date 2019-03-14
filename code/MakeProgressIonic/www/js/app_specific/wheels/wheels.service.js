@@ -21,8 +21,6 @@
             
         };
 
-        var PAUSE_FOR_A_WHILE_MS = 3000;
-
 
         return service;
 

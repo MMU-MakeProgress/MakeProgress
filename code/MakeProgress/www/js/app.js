@@ -29,7 +29,7 @@ angular.module('starter', [
         StatusBar.styleDefault();
       }
       // ADDED START
-      $state.go("templates_list");
+      $state.go("wheels_list");
       // ADDED END
 
     });
