@@ -30,6 +30,6 @@
             return vm.wheels.length == 0;
         }
 
-        
+        vm.wheels = wheelsSrvc.wheelLocalStorage();
     }
 })();
