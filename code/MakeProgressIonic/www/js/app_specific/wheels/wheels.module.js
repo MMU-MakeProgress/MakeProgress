@@ -19,6 +19,12 @@
 					templateUrl: 'js/app_specific/wheels/wheels.view.html',
                     controller: 'wheelsViewCtrl as vm'
 				})
+				.state('wheels_input', {
+					cache: false,
+					url: '/wheels_input',
+					templateUrl: 'js/app_specific/wheels/wheels.input.html',
+                    controller: 'wheelsInputCtrl as vm'
+				})
             });
 		
 })();
