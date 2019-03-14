@@ -31,6 +31,10 @@
         vm.add = function() {
             $state.go('templates_add');
         }
+
+        vm.goToHome = function() {
+            $state.go('home');
+        }
         
         
         vm.templates = templatesSrvc.getListOfTemplates();

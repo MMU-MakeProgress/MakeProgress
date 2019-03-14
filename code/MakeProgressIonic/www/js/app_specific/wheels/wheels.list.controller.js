@@ -30,6 +30,11 @@
             return vm.wheels.length == 0;
         }
 
+
+        vm.goToHome = function() {
+            $state.go('home');
+        }
+
         
     }
 })();

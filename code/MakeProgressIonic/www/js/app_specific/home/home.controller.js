@@ -27,6 +27,12 @@
             $state.go('wheels_list');
         }
 
+
+        vm.goToHome = function() {
+            $state.go('home');
+        }
+
+
         
     }
 })();
