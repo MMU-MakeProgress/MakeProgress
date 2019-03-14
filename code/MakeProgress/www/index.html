@@ -38,7 +38,7 @@
   <script src="lib/external/js/moment.min.js"></script>
   <script src="js/wrappers/format/moment.service.js"></script>
 
-  <!-- Chart dependencies -->
+  <!-- Chart dependencies START-->
   <script src="js/app_specific/radar/radar.module.js"></script>
 
   <script src="js/wrappers/chartJS/Chart.js"></script>
@@ -46,20 +46,31 @@
 
   <script src="js/wrappers/chartJS/angular-chart.js"></script>
   <script src="js/wrappers/chartJS/angular-chart.min.js"></script>
-  
+  <!-- Chart dependencies END-->
 
+
+  <script src="js/app_specific/home/home.module.js"></script>
+  <script src="js/app_specific/home/home.controller.js"></script>
+
+  <script src="js/app_specific/radar/radar.modules.js"></script>
 
   <script src="js/app_specific/templates/templates.module.js"></script>
   <script src="js/app_specific/templates/templates.service.js"></script>
   <script src="js/app_specific/templates/templates.list.controller.js"></script>
   <script src="js/app_specific/templates/templates.add.controller.js"></script>
+  
+  
+  <script src="js/app_specific/wheels/wheels.module.js"></script>
+  <script src="js/app_specific/wheels/wheels.service.js"></script>
+  <script src="js/app_specific/wheels/wheels.list.controller.js"></script>
+
   <!-- ADDED END -->
 
 </head>
 
 <body ng-app="starter">
   <!-- ADDED START -->
-  <ion-nav-view></ion-nav-view>
+
   <!-- ADDED END -->
 </body>
 
