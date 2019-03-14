@@ -25,9 +25,11 @@
             wheelsArray = []
             wheelsArray.push(JSON.parse(localStorage.getItem('storeTemplate')));
             return angular.copy(wheelsArray);
-
         }
 
+        service.addWheelLabels = function() {
+            
+        }
         return service;
 
     }
