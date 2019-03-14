@@ -9,7 +9,7 @@
         '$state',
         'wheelsSrvc'
         ];
-    
+
     function control(
         $state,
         wheelsSrvc
@@ -17,7 +17,7 @@
         var vm = angular.extend(this, {
             wheels : []
          });
-        
+
 
         vm.onItemSelected = function(index){
             console.log("Item : " + index);
@@ -31,10 +31,12 @@
         }
 
 
+
         vm.goToHome = function() {
             $state.go('home');
         }
 
-        
+        vm.wheels = wheelsSrvc.wheelLocalStorage();
+
     }
 })();
