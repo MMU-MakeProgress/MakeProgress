@@ -21,16 +21,13 @@
 
         vm.onItemSelected = function(index){
             console.log("Item : " + index);
-
-            //$state.go('wheels_detail', {selected: index});
-
+            console.log(vm.wheels[index]);
+            $state.go('wheels_view', {selected: index});
         }
 
         vm.noWheels = function(){
             return vm.wheels.length == 0;
         }
-
-
 
         vm.goToHome = function() {
             $state.go('home');

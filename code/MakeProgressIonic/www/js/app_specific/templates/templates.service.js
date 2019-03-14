@@ -38,7 +38,8 @@
             {
                 name : name,
                 description : description,
-                attributes: attributes
+                attributes: attributes,
+                attributeValues : attributeValues
             }
 
             templatesArray.push(result);
