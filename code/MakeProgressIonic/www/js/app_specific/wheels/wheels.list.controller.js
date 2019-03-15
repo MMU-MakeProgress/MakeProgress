@@ -22,7 +22,7 @@
         vm.onItemSelected = function(index){
             console.log("Item : " + index);
             console.log(vm.wheels[index]);
-            $state.go('wheels_view', {selected: index});
+            $state.go('wheels_view', {selected: vm.wheels[index]});
         }
 
         vm.noWheels = function(){

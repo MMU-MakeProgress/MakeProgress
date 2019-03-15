@@ -32,14 +32,14 @@
 
         service.addNewTemplate = function(name, description, attributes) {
             console.log("templatesService.addNewTemplate called with ",{name:name,desc:description,attr:attributes});
-            //var attributes =[];
+            var attributesValues =[];
 
             var result =
             {
                 name : name,
                 description : description,
                 attributes: attributes,
-                attributeValues : attributeValues
+                attributesValues : attributesValues
             }
 
             templatesArray.push(result);
