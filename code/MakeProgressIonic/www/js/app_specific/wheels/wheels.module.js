@@ -24,7 +24,7 @@
 					cache: false,
 					url: '/wheels_input',
 					templateUrl: 'js/app_specific/wheels/wheels.input.html',
-					params: {'obj': null },
+					params: {'selected2': 0 },
                     controller: 'wheelsInputCtrl as vm'
 				})
             });

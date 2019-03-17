@@ -27,7 +27,7 @@
             return angular.copy(wheelsArray);
         }
 
-        service.setWheelData = function() {
+        service.setWheelData = function(templateObj) {
             window.localStorage.setItem('storeTemplate' , JSON.stringify(templateObj)); 
         }
 
