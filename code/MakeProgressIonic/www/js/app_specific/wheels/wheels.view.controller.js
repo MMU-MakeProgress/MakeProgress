@@ -17,15 +17,24 @@
         $stateParams
     ) {
         var vm = angular.extend(this, {
-            
+            template : {
+                name: "",
+                description : "",
+                attributes : [],
+                attributesValues : [],
+            }
          });
         
          vm.noData = function() {
-            return vm.wheels.length == 0;
+            return vm.template.length == 0;
          }
         
          vm.goToInput = function() {
-             $state.go('wheels_input');
+             console.log(vm.template.attributes);
+             $state.go('wheels_input', {obj : vm.template});
          }
+         
+        var params = $stateParams;
+        vm.template = wheelsSrvc.getWheelAt(params.selected);
     }
 })();
