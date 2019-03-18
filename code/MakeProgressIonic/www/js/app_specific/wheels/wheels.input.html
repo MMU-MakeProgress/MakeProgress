@@ -5,11 +5,28 @@
     </ion-header-bar>
 
     <ion-content class="has-header">
-        
+        <div ng-repeat="attributeLbl in vm.template.attributes track by $index">
+        <ion-item>
+            <label>{{attributeLbl}}</label>
+            <select placeholder="Select One" ng-model='vm.template.attributesValues[$index]'>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+        </ion-item>
+    </div>
+    <button class="button button-full button-balanced" ng-click='vm.showTemp()'>SAVE</button>
     </ion-content>
 
     <ion-footer-bar class="bar bar-dark bar-footer row" style="position:fixed; bottom:0px; padding: 0px;">
 
     </ion-footer-bar>
 
-</ion-view>
+</ion-view>z

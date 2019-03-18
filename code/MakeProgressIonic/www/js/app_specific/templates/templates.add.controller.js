@@ -32,7 +32,7 @@
          }
          
          vm.savetemp = function() {
-             console.log("templates.add.controller:savetemp called");
+            console.log("templates.add.controller:savetemp called");
             templatesSrvc.addNewTemplate(vm.tempName, vm.tempDesc, vm.attributes);
             $state.go('templates_list');
          }

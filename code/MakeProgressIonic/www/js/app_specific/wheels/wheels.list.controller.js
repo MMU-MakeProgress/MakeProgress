@@ -18,7 +18,6 @@
             wheels : []
          });
 
-
         vm.onItemSelected = function(index){
             console.log("Item : " + index);
             console.log(vm.wheels[index]);
@@ -34,6 +33,7 @@
         }
 
         vm.wheels = wheelsSrvc.wheelLocalStorage();
+        
 
     }
 })();

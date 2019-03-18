@@ -21,6 +21,7 @@
 
         vm.onItemSelected = function(index){
             console.log("Item : " + index);
+            console.log(vm.templates[index]);
             //$state.go('templates_detail', {selected: index});
         }
 

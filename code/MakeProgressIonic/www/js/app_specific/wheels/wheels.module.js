@@ -17,12 +17,14 @@
 					cache: false,
 					url: '/wheels_view',
 					templateUrl: 'js/app_specific/wheels/wheels.view.html',
+					params: {'selected': 0 },
                     controller: 'wheelsViewCtrl as vm'
 				})
 				.state('wheels_input', {
 					cache: false,
 					url: '/wheels_input',
 					templateUrl: 'js/app_specific/wheels/wheels.input.html',
+					params: {'selected2': 0 },
                     controller: 'wheelsInputCtrl as vm'
 				})
             });

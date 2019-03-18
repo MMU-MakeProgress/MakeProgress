@@ -27,9 +27,18 @@
             return angular.copy(wheelsArray);
         }
 
+        service.setWheelData = function(templateObj) {
+            window.localStorage.setItem('storeTemplate' , JSON.stringify(templateObj)); 
+        }
+
         service.addWheelLabels = function() {
             
         }
+
+        service.getWheelAt = function(index) {
+            return angular.copy(wheelsArray[index]);
+        }
+        
         return service;
 
     }
