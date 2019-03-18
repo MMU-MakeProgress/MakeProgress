@@ -32,7 +32,7 @@ angular.module('starter', [
         StatusBar.styleDefault();
       }
       // ADDED START
-      $state.go("radhomear");
+      $state.go("home");
       // ADDED END
 
     });
