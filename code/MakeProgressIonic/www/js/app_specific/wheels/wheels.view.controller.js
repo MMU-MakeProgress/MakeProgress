@@ -33,6 +33,11 @@
              console.log(vm.template.attributes);
              $state.go('wheels_input', {selected2 : params.selected});
          }
+
+
+         vm.goToWheels = function() {
+            $state.go('wheels_list');
+        }
          
         var params = $stateParams;
         vm.template = wheelsSrvc.getWheelAt(params.selected);

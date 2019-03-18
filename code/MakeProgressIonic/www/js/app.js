@@ -8,8 +8,8 @@ angular.module('starter', [
   'momentjs', // ADDED used for dates
   'templatesjs',  // ADDED our events module
   'homejs',
-  'radarjs',
   'wheelsjs',
+  'radarjs',
   'chart.js' 
 ])
 
