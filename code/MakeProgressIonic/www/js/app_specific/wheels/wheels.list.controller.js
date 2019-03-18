@@ -32,6 +32,10 @@
             $state.go('home');
         }
 
+        vm.goToRadar = function() {
+            $state.go('radar');
+        }
+
         vm.wheels = wheelsSrvc.wheelLocalStorage();
         
 
