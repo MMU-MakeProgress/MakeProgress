@@ -43,3 +43,6 @@
         vm.template = wheelsSrvc.getWheelAt(params.selected);
     }
 })();
+
+
+
