@@ -8,6 +8,7 @@ angular.module('starter', [
   'momentjs', // ADDED used for dates
   'templatesjs',  // ADDED our events module
   'homejs',
+  'radarjs',
   'wheelsjs',
   'chart.js' 
 ])
@@ -31,7 +32,7 @@ angular.module('starter', [
         StatusBar.styleDefault();
       }
       // ADDED START
-      $state.go("home");
+      $state.go("radhomear");
       // ADDED END
 
     });
@@ -47,14 +48,5 @@ angular.module('starter', [
   }); 
  
 
-/* .controller("testController", function ($scope) {
-  $scope.labels =["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"];
-
-  $scope.data = [
-    [65, 59, 90, 81, 56, 55, 40],
-    [28, 48, 40, 19, 96, 27, 100]
-  ];
-   
-}); */
 
   
