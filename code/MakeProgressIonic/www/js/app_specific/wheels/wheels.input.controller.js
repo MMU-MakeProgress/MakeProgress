@@ -28,6 +28,10 @@
          vm.showTemp = function() {
              console.log(vm.template);
              wheelsSrvc.setWheelData(vm.template);
+             $state.go('wheels_view', {}, {reload: true});
+         }
+
+         vm.cancel = function() {
              $state.go('wheels_view');
          }
 

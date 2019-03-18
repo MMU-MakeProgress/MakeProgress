@@ -23,12 +23,17 @@
 
         service.wheelLocalStorage = function() {
             wheelsArray = []
-            wheelsArray.push(JSON.parse(localStorage.getItem('storeTemplate')));
+            getExistingWheelsFromLocalStorage();
             return angular.copy(wheelsArray);
         }
 
         service.setWheelData = function(templateObj) {
-            window.localStorage.setItem('storeTemplate' , JSON.stringify(templateObj)); 
+            wheelsArray = [];
+            wheelsArray.push(templateObj);
+            wheelsArray = wheelsArray.concat(JSON.parse(localStorage.getItem('storeTemplate')||'[]'));
+            console.log(wheelsArray);
+          
+            localStorage.setItem("storeTemplate", JSON.stringify(wheelsArray));
         }
 
         service.addWheelLabels = function() {
@@ -39,6 +44,14 @@
             return angular.copy(wheelsArray[index]);
         }
         
+        var getExistingWheelsFromLocalStorage = function()
+        {
+            var temp = JSON.parse(localStorage.getItem('storeTemplate'));
+
+            for (var i in temp) { 
+                wheelsArray.push(temp[i]);
+            }
+        }
         return service;
 
     }

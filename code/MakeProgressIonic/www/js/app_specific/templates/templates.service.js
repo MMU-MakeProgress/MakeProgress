@@ -49,13 +49,24 @@
 
         var saveTemplateToLocalStorage = function(templateObj)
         {
-            window.localStorage.setItem('storeTemplate' , JSON.stringify(templateObj)); 
+            //window.localStorage.setItem('storeTemplate' , JSON.stringify(templateObj)); 
+            templatesArray = [];
+            templatesArray.push(templateObj);
+            templatesArray = templatesArray.concat(JSON.parse(localStorage.getItem('storeTemplate')||'[]'));
+            console.log(templatesArray);
+          
+            localStorage.setItem("storeTemplate", JSON.stringify(templatesArray));
         }
 
         var getExistingTemplatesFromLocalStorage = function()
         {
-            templatesArray.push(JSON.parse(localStorage.getItem('storeTemplate')));
-            
+            templatesArray = [];
+            var temp = JSON.parse(localStorage.getItem('storeTemplate'));
+
+            for (var i in temp) { 
+                templatesArray.push(temp[i]);
+            }
+            console.log(templatesArray);
         }
 
 
