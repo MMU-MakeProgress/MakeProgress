@@ -30,8 +30,9 @@
          }
         
          vm.goToInput = function() {
-             console.log(vm.template.attributes);
-             $state.go('wheels_input', {selected2 : params.selected});
+            //console.log(vm.template.attributes);
+            $state.go('wheels_input', {selected2 : params.selected});
+
          }
 
 

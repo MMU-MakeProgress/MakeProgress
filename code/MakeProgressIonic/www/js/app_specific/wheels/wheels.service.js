@@ -17,6 +17,7 @@
         moment
     ) {
         var wheelsArray = [];
+        var temporaryArray = [];
         var service = {
             
         };
@@ -28,10 +29,21 @@
         }
 
         service.setWheelData = function(templateObj) {
+            temporaryArray = [];
+            temporaryArray = JSON.parse(localStorage.getItem('storeTemplate')||'[]');
+            for(var i in temporaryArray)
+            {
+                if (temporaryArray[i].name == templateObj.name) {
+                    temporaryArray.splice(i, 1);
+                }
+            }
+            
+            localStorage.setItem("storeTemplate", JSON.stringify(temporaryArray));
+
             wheelsArray = [];
             wheelsArray.push(templateObj);
             wheelsArray = wheelsArray.concat(JSON.parse(localStorage.getItem('storeTemplate')||'[]'));
-            console.log(wheelsArray);
+            //console.log(wheelsArray);
           
             localStorage.setItem("storeTemplate", JSON.stringify(wheelsArray));
         }

@@ -22,10 +22,17 @@
                 description : "",
                 attributes : [],
                 attributesValues : [],
-            }
+            },
+
+            temporaryArray : []
          });
+
+         vm.pushAttributes = function() {
+             vm.template.attributesValues.push(vm.temporaryArray);
+         }
         
          vm.showTemp = function() {
+             vm.pushAttributes();
              console.log(vm.template);
              wheelsSrvc.setWheelData(vm.template);
              $state.go('wheels_view', {}, {reload: true});

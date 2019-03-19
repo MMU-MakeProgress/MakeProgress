@@ -8,7 +8,7 @@
         <div ng-repeat="attributeLbl in vm.template.attributes track by $index">
         <ion-item>
             <label>{{attributeLbl}}</label>
-            <select placeholder="Select One" ng-model='vm.template.attributesValues[$index]'>
+            <select placeholder="Select One" ng-model='vm.temporaryArray[$index]'>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
