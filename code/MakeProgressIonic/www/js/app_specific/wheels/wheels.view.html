@@ -10,9 +10,29 @@
             <div  style="text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
                 <h3 class="light">Name: {{vm.template.name}}</h3>
                 <h3 class="light">Desc: {{vm.template.description}}</h3>
-                <h3 class="light">Attributes: {{vm.template.attributes.length}}</h3>
+                <h3 class="light">Attributes: {{vm.template.attributes}}</h3>
                 <h3 class="light">Attributes Values: {{vm.template.attributesValues}}</h3>
+                
+                <div class="card" x-style="text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    <div class="item item-text-wrap">
+                    <canvas 
+                        id="radar" 
+                        class="chart chart-radar"
+                        chart-data="vm.template.attributesValues"
+                        chart-options="options" 
+                        chart-labels="vm.template.attributes">
+                    </canvas> 
+    
+                </div>
+            
             </div>
+
+
+            
+                
+            </div>
+
+
         
     </ion-content>
 
