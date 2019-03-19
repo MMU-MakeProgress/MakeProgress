@@ -23,15 +23,16 @@
             data : undefined
          });
 
-         vm.addattribute = function() {
+         vm.addattribute = function addattribute(x) {
             if (vm.attributes.length < 8) {
                 vm.attributes.push('');
             }
-         } 
+         };
 
          vm.delattribute = function(index) {
+             console.log('Deleted');
              vm.attributes.splice(index, 1);
-         }
+         };
          
          vm.savetemp = function() {
             if (vm.attributes.length >= 3) {
@@ -41,11 +42,11 @@
             } else {
                 vm.showAlert();
             }
-         }
+         };
 
         vm.cancel = function() {
             $state.go('templates_list');
-        }
+        };
 
         vm.showAlert = function() {
             var alertPopup = $ionicPopup.alert({
