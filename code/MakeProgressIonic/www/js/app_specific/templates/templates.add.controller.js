@@ -7,12 +7,14 @@
 
     control.$inject = [
         '$state',
-        'templatesSrvc'
+        'templatesSrvc',
+        '$ionicPopup'
         ];
     
     function control(
         $state,
-        templatesSrvc
+        templatesSrvc,
+        $ionicPopup
     ) {
         var vm = angular.extend(this, {
             tempName : "",
@@ -22,7 +24,7 @@
          });
 
          vm.addattribute = function() {
-            if (vm.attributes.length < 5) {
+            if (vm.attributes.length < 8) {
                 vm.attributes.push('');
             }
          } 
@@ -32,15 +34,28 @@
          }
          
          vm.savetemp = function() {
-            console.log("templates.add.controller:savetemp called");
-            templatesSrvc.addNewTemplate(vm.tempName, vm.tempDesc, vm.attributes);
-            $state.go('templates_list');
+            if (vm.attributes.length >= 3) {
+                console.log("templates.add.controller:savetemp called");
+                templatesSrvc.addNewTemplate(vm.tempName, vm.tempDesc, vm.attributes);
+                $state.go('templates_list');
+            } else {
+                vm.showAlert();
+            }
          }
 
         vm.cancel = function() {
             $state.go('templates_list');
         }
 
-        
+        vm.showAlert = function() {
+            var alertPopup = $ionicPopup.alert({
+                title: 'Error',
+                template: 'At least 3 attributes needed',
+            });
+
+            alertPopup.then(function(res) {
+                console.log('Thanks');
+            });
+        };
     }
 })();

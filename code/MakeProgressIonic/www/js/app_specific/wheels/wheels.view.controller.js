@@ -21,7 +21,7 @@
                 name: "",
                 description : "",
                 attributes : [],
-                attributesValues : [],
+                attributesValues : []
             }
          });
         
