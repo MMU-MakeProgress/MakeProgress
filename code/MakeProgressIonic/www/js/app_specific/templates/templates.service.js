@@ -69,6 +69,9 @@
             console.log(templatesArray);
         }
 
+        service.getTemplateAt = function(index) {
+            return angular.copy(templatesArray[index]);
+        }
 
         return service;
 

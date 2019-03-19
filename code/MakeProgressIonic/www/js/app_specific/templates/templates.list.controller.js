@@ -22,7 +22,7 @@
         vm.onItemSelected = function(index){
             console.log("Item : " + index);
             console.log(vm.templates[index]);
-            //$state.go('templates_detail', {selected: index});
+            $state.go('templates_details', {selected3: index});
         }
 
         vm.noTemplates = function(){
