@@ -19,20 +19,26 @@
                 inputValues : []
              });
             
-    
+
             var init = function init() {
 
                 console.log("Hello");
+
+                vm.lables = ["January", "February", "March", "April", "May", "June", "July"];
                 vm.attributeNames =["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"];
                 
-                vm.inputValues = [
+                vm.inputValues = 
+                [
+
                     [65, 59, 90, 81, 56, 55, 40],
                     [28, 48, 40, 19, 96, 27, 100]
                 ];
 
 
-              }
-            init();
+              } 
+
+              init();
+            
 
             vm.goToWheels = function() {
                 $state.go('wheels_list');
