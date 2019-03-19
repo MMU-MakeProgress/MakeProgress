@@ -17,6 +17,7 @@
         moment
     ) {
         var templatesArray = [];
+        var temporaryArray = [];
         var service = {
             
         };
@@ -71,6 +72,20 @@
 
         service.getTemplateAt = function(index) {
             return angular.copy(templatesArray[index]);
+        }
+
+        service.deleteTemplate = function(selectedTemp) {
+            temporaryArray = [];
+            temporaryArray = JSON.parse(localStorage.getItem('storeTemplate')||'[]')
+            
+            for (var i in temporaryArray) {
+                var tempName = temporaryArray[i].name;
+                if(tempName == service.getTemplateAt(selectedTemp).name){
+                    console.log(temporaryArray[i].name);
+                    temporaryArray.splice(i, 1);
+                }
+            }
+			localStorage.setItem("storeTemplate", JSON.stringify(temporaryArray));
         }
 
         return service;
