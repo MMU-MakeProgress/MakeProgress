@@ -19,7 +19,7 @@
         
         <ion-list>
             <ion-item class="item item-remove-animate item-icon-right" ng-repeat="attribute in vm.attributes track by $index">
-                <input style="width: 100%;" type="text" placeholder="Attribute" ng-model="vm.attributes[$index]"/>
+                <input style="width: 100%;" type="text" placeholder="Attribute {{$index+1}}" ng-model="vm.attributes[$index]"/>
                 <ion-option-button class="button button-assertive icon-left ion-trash-b" ng-click="vm.delattribute($index)"></ion-option-button>
             </ion-item>
         </ion-list>
